@@ -1,0 +1,12 @@
+@use '../themes/theme' as *;
+@import '../bootstrap/scss/bootstrap.scss';
+
+.highlight {
+    color: #745BB3
+}
+
+#reinsurance {
+    img {
+        width: 5vh;
+    }
+}

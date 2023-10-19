@@ -3,22 +3,19 @@ import { NavLink } from 'react-router-dom'
 
 export default function Header() {
     return (
-        <header>
+        <header className='container'>
             <nav>
-                <ul>
-                    <li>
-                        <NavLink to="/">Home</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="contact">Contact</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="login">Se connecter</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="sing-in">S'inscrire</NavLink>
-                    </li>
-                </ul>
+                <NavLink to="/">
+                    <img src="" alt="La Manu Box" />
+                </NavLink>
+            <div>
+                <NavLink to="contact">Nos boxes</NavLink>
+                <NavLink to="contact">Nous contacter</NavLink>
+            </div>
+            <div>
+                <NavLink to="sing-in">S'inscrire</NavLink>
+                <NavLink to="login">Se connecter</NavLink>
+            </div>
             </nav>
         </header>
     )
