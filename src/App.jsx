@@ -1,39 +1,39 @@
-import React, { useState } from 'react';
-import CreateAccount from './components/Inscription-Connexion/createAccount';
-import Login from './components/Inscription-Connexion/login';
+import Contact from "./pages/Contact";
+import Template from "./Template";
+import Sign_In from './components/createAccount';
+import Login from "./components/login";
+import HomePage from './pages/Home';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-export default function App() {
-  const [loggedIn, setLoggedIn] = useState(false);
-  const [showCreateAccount, setShowCreateAccount] = useState(false);
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <Template />,
+      errorElement: <div>error 404</div>,
+      children: [
+        {
+          path: 'login',
+          element: <Login />,
+        },
+        {
+          path: 'sing-in',
+          element: <Sign_In />,
+        },
+        {
+          path: 'contact',
+          element: <Contact />,
+        },
+        {
+          path: 'home',
+          element: <HomePage />,
+        },
+      ]
+    }
+  ]
+)
+function App() {
 
-  const handleLogin = () => {
-    setLoggedIn(true);
-    setShowCreateAccount(false);
-  };
-
-  const handleLogout = () => {
-    setLoggedIn(false);
-  };
-
-  return (
-    <>
-      <div>
-        {loggedIn ? (
-          <div>
-            <h1>Bienvenue, {localStorage.getItem('username')}!</h1>
-            <button onClick={handleLogout}>Déconnexion</button>
-          </div>
-        ) : (
-          showCreateAccount ? (
-            <CreateAccount onLogin={handleLogin} />
-          ) : (
-            <div>
-              <Login onLogin={handleLogin} />
-              <button onClick={() => setShowCreateAccount(true)}>Créer son compte</button>
-            </div>
-          )
-        )}
-      </div>
-    </>
-  )
+  return <RouterProvider router={router} />
 }
+export default App;
