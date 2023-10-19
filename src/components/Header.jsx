@@ -13,10 +13,10 @@ export default function Header() {
                         <NavLink to="contact">Contact</NavLink>
                     </li>
                     <li>
-                        <NavLink to="login">Login</NavLink>
+                        <NavLink to="login">Se connecter</NavLink>
                     </li>
                     <li>
-                        <NavLink to="sing-in">Sing-In</NavLink>
+                        <NavLink to="sing-in">S'inscrire</NavLink>
                     </li>
                 </ul>
             </nav>
