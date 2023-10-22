@@ -1,0 +1,67 @@
+.quantity{
+    display: flex;
+    // justify-content: end;
+    align-items: center;
+    // align-content: end;
+}
+label{
+    font-weight: 600;
+}
+// .btnGroupQuantity__item{
+//     display: flex;
+//     // justify-content: end;
+// }
+.btnGroupQuantity{
+    display: flex;
+    flex-direction: column;
+    // justify-content: end;
+    align-items: end;
+    gap: 20px 10px ;
+    
+    &__item{
+        display: flex;
+        // width: 100%;
+    }
+}
+// .incremental{
+//     width: 100%;
+// }
+.fa-duotone-levitate {
+    animation: levitate 2s infinite ease-in-out;
+    box-shadow: 0px 4px 8px rgba(0, 128, 0, 0.5);
+  }
+  
+  .fa-duotone-hover {
+    transition: transform 0.5s;
+    color: #000;
+  }
+  
+  .fa-duotone-hover:hover {
+    transform: rotate(360deg);
+    color: #00ff00;
+  }
+  
+  @keyframes levitate {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-60px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  #boxSelection{
+    display: flex ;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .boxIcone{
+    display: block;
+    margin: 0 auto;
+  }
+//   .boxInformation,.boxAnimation{
+//     width: fit-content;
+//   }
