@@ -1,0 +1,22 @@
+/* *{
+    border: 1px solid red;
+} */
+body{
+    display: block!important;
+}
+#login{
+    background-image: url('../images/background-connexion.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+.col-md-4{
+    background-color: white;
+    border-radius: 1em;
+    width: 50vh;
+    height: 50vh;
+    line-height: 2.5em;
+}
+#login-btn{
+    padding-top: 2em;
+}
