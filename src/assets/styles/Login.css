@@ -2,7 +2,6 @@
     border: 1px solid red;
 } */
 body{
-    
     display: block!important;
 }
 #login{
@@ -16,4 +15,8 @@ body{
     border-radius: 1em;
     width: 50vh;
     height: 50vh;
+    line-height: 2.5em;
+}
+#login-btn{
+    padding-top: 2em;
 }
