@@ -6,43 +6,35 @@ import HomePage from './pages/Home';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import BoxCreation from './components/BoxCreation/BoxCreation'
 
-// const router = createBrowserRouter(
-//   [
-//     {
-//       path: '/',
-//       element: <Template />,
-//       errorElement: <div>error 404</div>,
-//       children: [
-//         {
-//           path: 'login',
-//           element: <Login />,
-//         },
-//         {
-//           path: 'sing-in',
-//           element: <Sign_In />,
-//         },
-//         {
-//           path: 'contact',
-//           element: <Contact />,
-//         },
-//         {
-//           index:true,
-//           element: <HomePage />,
-//         },
-//       ]
-//     }
-//   ]
-// )
-// function App() {
-
-//   return <RouterProvider router={router} />
-// }
-// export default App;
-
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <Template />,
+      errorElement: <div>error 404</div>,
+      children: [
+        {
+          path: 'login',
+          element: <Login />,
+        },
+        {
+          path: 'sing-in',
+          element: <Sign_In />,
+        },
+        {
+          path: 'contact',
+          element: <Contact />,
+        },
+        {
+          index:true,
+          element: <HomePage />,
+        },
+      ]
+    }
+  ]
+)
 function App() {
-  return(
 
-    <BoxCreation />
-  )
+  return <RouterProvider router={router} />
 }
 export default App;
