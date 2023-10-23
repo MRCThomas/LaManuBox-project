@@ -9,7 +9,7 @@ function CustomButton( props) {
         callback()
     }
   return (
-    <button className={`btnAdd button${radius}`} onClick={handleClick}>{icon}</button>
+    <button className={`btn btn-dark btnAdd button${radius}`} onClick={handleClick}>{icon}</button>
     // <button className={`btn${radius}`} style={style} onClick={handleClick}>{icon}</button>
   )
 }

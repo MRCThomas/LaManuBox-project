@@ -64,14 +64,14 @@ label{
     }
   }
   .boxInformation{
-    width: 45%;
+    width: fit-content;
 
   }
   .boxAnimation{
     display: flex;
     flex-direction: column;
     justify-content: top;
-    width: 50%;
+    width: fit-content;
     // padding: 2vh 3vw ;
     // height:70vh ;
     // background-color: red;

@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import BoxCreation from '../components/BoxCreation/BoxCreation'
+// import '../components/BoxCreation/BoxCreation.scss'
 import './home.scss'
 
 
@@ -69,8 +71,7 @@ export default function Home() {
             </div>
             <img className='col-xl-5 img-margin-top' src="src\assets\images\illustration2.png" alt="Transport" />
         </div>
-
-
+      <BoxCreation/>
         {/* Contact us */}
         <div className='row align-items-center justify-content-between section'>
             <img className='col-xl-5 img-margin-bottom' src="./src\assets\images\undraw_contact_us_re_4qqt.png" alt="Contactez-nous" />

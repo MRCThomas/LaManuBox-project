@@ -18,7 +18,7 @@ export default function BoxCreation() {
     //state de la taille e l'article
     const [items, setItems] = useState(0);
     //state du nom de l'article
-    const [namoObject, setNameObject] = useState('');
+    const [namoObject, setNameObject] = useState(' ');
     //state pour stocker la quantité d'un aricle
     const [quantityArticles, setQuantityArticles] = useState(1);
     //state de l'esppace disponible initialiser a 100
@@ -72,7 +72,12 @@ export default function BoxCreation() {
              
           // CALCUL DE L'ESPACE DEMANDES PAR L'UTILISATEUR
   const handleCalculateSpace = async () => {
+    if(!namoObject || quantityArticles < 0){
+      alert('vous devez renseignez toutes les valeurs du formulaire.')
+      return;
+    }
                   const spellvalue = await spell(namoObject)
+                  // console.log(spellvalue);
                     if (!spellvalue) {
                       setNameObject('');
                       alert('renseignez correctement le mot')
@@ -248,7 +253,7 @@ export default function BoxCreation() {
                     </div>
                 </div>
                 <div className="calculateSpace mt-3 mb-3">
-                      <button onClick={()=> handleCalculateSpace()} className='btnSpace'>Calculer l'espace renseigné</button>
+                      <button onClick={()=> handleCalculateSpace()} className='btn btn-dark btnSpace'>Calculer l'espace renseigné</button>
                 </div>
                 <div className="recommandation">
                       <h2> Estimation de  l'espace démandé : {result}</h2>
@@ -290,7 +295,7 @@ export default function BoxCreation() {
 
                         </div>
                         <div className="deleteObject">
-                              <button onClick={handleRemoveChecked}>Supprimer</button>
+                              <button className='btn btn-dark' onClick={handleRemoveChecked}>Supprimer</button>
                         </div>
                 </div>
             </div>
@@ -300,7 +305,9 @@ export default function BoxCreation() {
                       <h3> Aperçu de votre box </h3>
                   </div>
                     <div className='boxIcone'>
-                          <CustomFontAwesomeIcon  color={suggestion.colorClass }
+                          <CustomFontAwesomeIcon  
+                          // color='purple'
+                          color={suggestion.colorClass }
                             size={
                               result >= 0 && result <= 7.5
                                 ? '320px'

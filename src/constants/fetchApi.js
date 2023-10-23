@@ -5,8 +5,9 @@ export const spell = async (word) => {
       const data = await res.json()
       console.log(data);
         if(data.response.errors.length == 0){
-          console.log('orthoraphe correct du mot');  
-          return true;
+            
+            console.log('orthoraphe correct du mot');  
+            return true;
         }else{
           alert("Veuillez vérifier le nom de l'objet");
           return false;
