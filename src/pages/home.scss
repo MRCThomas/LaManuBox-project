@@ -1,5 +1,5 @@
 @use '../themes/theme' as *;
-@import '../bootstrap/scss/bootstrap.scss';
+@import '../../node_modules/bootstrap/';
 
 @font-face {
     font-family: 'Rubik';
