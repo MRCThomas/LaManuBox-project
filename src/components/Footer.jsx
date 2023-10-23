@@ -14,7 +14,7 @@ export default function Footer() {
                 <h3 className='mb-4 text-white'>En savoir plus</h3>
                 <p className='text-white'>Tarifs</p>
                 <p className='text-white'>Nos engagements</p>
-                <p className='text-white'>Sit lorem</p>
+                <p className='text-white'>FAQ</p>
               </div>
               <div className='col'>
                 <h3 className='mb-4 text-white'>Nos services</h3>
