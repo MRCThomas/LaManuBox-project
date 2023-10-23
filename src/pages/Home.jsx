@@ -113,7 +113,7 @@ export default function Home() {
             <img className='col-xl-5 img-margin-bottom' src="./src\assets\images\undraw_contact_us_re_4qqt.png" alt="Contactez-nous" />
             <div className='col text-margin-left'>
               <h2><span className='highlight'>Contactez</span>-nous</h2>
-              <p className='text-margin-right'>Lorem ipsum dolor sit amet consectetur. Tortor auctor pellentesque pulvinar leo ut fusce ut. Integer tristique nibh faucibus aliquet dapibus eu egestas. Arcu arcu eleifend diam sed dictum. Laoreet amet gravida condimentum facilisi consectetur malesuada vitae sem.</p>
+              <p className='text-margin-right'>Nous nous engageons à vous offrir un service clientèle de qualité. Notre équipe est là pour résoudre vos problèmes, répondre à vos questions et vous assister à chaque étape du processus. N'hésitez pas à nous contacter pour toute demande ou préoccupation, quelle qu'elle soit.</p>
             </div>
         </div>
 
@@ -124,7 +124,7 @@ export default function Home() {
               <img className='mb-5' src="./src\assets\images\quote.png" alt="Avis" />
               <p className='mb-5'>J'ai loué un box de rangement chez La Manu Box et je suis très satisfait de leur service. Le personnel était amical et serviable, le box était propre et sécurisé, et les tarifs étaient très raisonnables.</p>
               <div className='d-flex'>
-                <div className='notice-img'></div>
+                <div className='notice-img notice-img-1'></div>
                 <div className='d-flex flex-column justfy-content-center ms-3'>
                   <p className='mb-0 fw-bolder'>John Doe</p>
                   <p className='m-0 fw-light'>Client La Manu Box</p>
@@ -137,10 +137,10 @@ export default function Home() {
               <img className='mb-5' src="./src\assets\images\quote.png" alt="Avis" />
               <p className='mb-5'>Je recommande vivement La Manu Box pour la location de box de rangement. Le processus d'inscription était simple, le site était bien entretenu, et j'ai toujours eu accès à mes affaires quand j'en avais besoin.</p>
               <div className='d-flex'>
-                <div className='notice-img'></div>
+                <div className='notice-img notice-img-2'></div>
                 <div className='d-flex flex-column justfy-content-center ms-3'>
-                  <p className='mb-0 fw-bolder'>John Doe</p>
-                  <p className='m-0 fw-light'>Client La Manu Box</p>
+                  <p className='mb-0 fw-bolder'>Emily Brown</p>
+                  <p className='m-0 fw-light'>Cliente La Manu Box</p>
                 </div>
               </div>
             </div>
@@ -150,10 +150,10 @@ export default function Home() {
               <img className='mb-5' src="./src\assets\images\quote.png" alt="Avis" />
               <p className='mb-5'>Je suis un client fidèle de La Manu Box depuis des années. Leurs tarifs compétitifs et leur service client exceptionnel me font revenir chaque fois que j'ai besoin de stocker des affaires.</p>
               <div className='d-flex'>
-                <div className='notice-img'></div>
+                <div className='notice-img notice-img-3'></div>
                 <div className='d-flex flex-column justfy-content-center ms-3'>
-                  <p className='mb-0 fw-bolder'>John Doe</p>
-                  <p className='m-0 fw-light'>Client La Manu Box</p>
+                  <p className='mb-0 fw-bolder'>Jane Smith</p>
+                  <p className='m-0 fw-light'>Cliente La Manu Box</p>
                 </div>
               </div>
             </div>
@@ -164,7 +164,7 @@ export default function Home() {
         <div className='row section align-items-center'>
             <div className='col'>
               <h2>Où sont <span className='highlight'>nos box</span> ?</h2>
-              <p className='text-margin-right'>Lorem ipsum dolor sit amet consectetur. Tortor auctor pellentesque pulvinar leo ut fusce ut. Integer tristique nibh faucibus aliquet dapibus eu egestas. Arcu arcu eleifend diam sed dictum. Laoreet amet gravida condimentum facilisi consectetur malesuada vitae sem.</p>
+              <p className='text-margin-right'>Nous vous invitons chaleureusement à visiter notre emplacement pour voir nos installations de stockage par vous-même. Notre équipe amicale et compétente est là pour répondre à toutes vos questions et vous guider dans le choix de la taille de box la mieux adaptée à vos besoins. Découvrez pourquoi nous sommes le choix de confiance pour le stockage sécurisé.</p>
             </div>
             <img className='col-xl-5 img-margin-top' src="./src\assets\images\la_manu_map.png" alt="Localisation La Manu Box" />
         </div>

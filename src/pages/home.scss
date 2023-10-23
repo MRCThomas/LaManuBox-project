@@ -28,10 +28,21 @@
     width: 8vh;
     height: 8vh;
     border-radius: 1000px;
-    background-image: url("../assets/images/jeune-homme-barbu-chemise-rayee.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.notice-img-1 {
+    background-image: url("../assets/images/jeune-homme-barbu-chemise-rayee.jpg");
+}
+
+.notice-img-2 {
+    background-image: url("../assets/images/gai-boucle-affaires-girl-porter-lunettes.jpg");
+}
+
+.notice-img-3 {
+    background-image: url("../assets/images/portrait-belle-jeune-femme-debout-mur-gris.jpg");
 }
 
 .text-margin-left {
