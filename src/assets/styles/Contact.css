@@ -2,11 +2,12 @@
     border: 1px solid red;
 } */
 body {
-    display: block !important;
+    display: block;
+    background-color: red;
 }
 
-#login {
-    background-image: url('../images/background-connexion.svg');
+#contact {
+    background-image: url("./assets/images/background-connexion.svg");
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
@@ -17,9 +18,8 @@ body {
     border-radius: 1em;
     width: 50vh;
     height: 50vh;
-    line-height: 2.5em;
 }
 
-#login-btn {
+#contact-btn {
     padding-top: 2em;
 }

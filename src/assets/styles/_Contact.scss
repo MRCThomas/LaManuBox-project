@@ -3,8 +3,9 @@
 } */
 body {
   display: block !important;
+  background-color: red!important;
 }
-#login {
+#contact {
   background-image: url("./assets/images/background-connexion.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -17,6 +18,6 @@ body {
   height: 50vh;
 }
 
-#login-btn{
+#contact-btn{
   padding-top: 2em;
 }

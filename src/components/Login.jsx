@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
-import '../assets/styles/Login.css';
 import { AuthContext } from '../context/AuthContext';
 
 function Login() {
@@ -44,7 +43,7 @@ function Login() {
                                 />
                                 <label htmlFor="mot de passe">Mot de passe</label>
                                 <input
-                                    type="current-password"
+                                    type="password"
                                     className="form-control"
                                     placeholder="Mot de passe"
                                     value={password}

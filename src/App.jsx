@@ -3,7 +3,6 @@ import Sign_In from './components/createAccount';
 import Login from "./components/Login";
 import HomePage from './pages/Home';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import BoxCreation from './components/BoxCreation/BoxCreation'
 
 const router = createBrowserRouter(
   [
