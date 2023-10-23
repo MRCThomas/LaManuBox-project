@@ -1,0 +1,5 @@
+@use './themes/theme' as *;
+@use './pages/home';
+@use './assets/styles/Nav';
+@use './assets/styles/Login';
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
