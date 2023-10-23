@@ -2,8 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './home.scss'
 
+
 export default function Home() {
   return (
+
       <div className='container-fluid col-lg-9'>
         {/* Banner */}
         <div className='row align-items-center section'>
@@ -68,45 +70,6 @@ export default function Home() {
             <img className='col-xl-5 img-margin-top' src="src\assets\images\illustration2.png" alt="Transport" />
         </div>
 
-        {/* Simulator */}
-        {/* <div className='row'>
-            <div>
-              <h2>Lorem ipsum dolor sit amet</h2>
-              <div className='d-flex'>
-                <div className='col-sm-2 bg-primary text-light rounded text-center'>
-                  <p className='fw-bold fs-3'>S</p>
-                  <p>2 à 3 m²</p>
-                </div>
-                <div className='size-btn'>
-                  <p>M</p>
-                  <p>3 à 6 m²</p>
-                </div>
-                <div className='size-btn'>
-                  <p>L</p>
-                  <p>6 à 10 m²</p>
-                </div>
-                <div className='size-btn'>
-                  <p>XL</p>
-                  <p>10 à 16 m²</p>
-                </div>
-              </div>
-              <p>Lorem ipsum dolor sit amet consectetur. Tortor auctor pellentesque pulvinar leo ut fusce ut. Integer tristique nibh faucibus aliquet dapibus eu egestas. Arcu arcu eleifend diam sed dictum. Laoreet amet gravida condimentum facilisi consectetur malesuada vitae sem. Libero mauris vestibulum pretium imperdiet quis mattis est sed vestibulum. Tellus amet dictumst neque id. Vel ut urna tortor eu tellus enim nisl non ac. Enim egestas ullamcorper nibh feugiat leo.</p>
-              <p>Felis amet venenatis mattis metus ut integer volutpat donec pellentesque. Mauris sed adipiscing habitasse purus in consectetur magna amet ac. Vitae id ultricies aliquam porttitor lacus cursus lectus urna. Imperdiet amet rhoncus est non cras amet ultricies lacus proin. Viverra sit sed nisi odio libero at vitae sit mauris. Auctor neque accumsan ullamcorper iaculis aliquam et eu cras.</p>
-              <div className='card__counters'>
-                <div>
-                  <p>Chaise</p>
-                  <div>
-                    <span>-</span>
-                    <input type="text" value='0'/>
-                    <span>+</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <img src="./src\assets\images\la-manu-build.png" alt="" />
-            </div>
-        </div> */}
 
         {/* Contact us */}
         <div className='row align-items-center justify-content-between section'>
@@ -169,8 +132,7 @@ export default function Home() {
             <img className='col-xl-5 img-margin-top' src="./src\assets\images\la_manu_map.png" alt="Localisation La Manu Box" />
         </div>
 
-
-
       </div>
+
   )
 }
