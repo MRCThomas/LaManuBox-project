@@ -15,7 +15,7 @@ export function CalculateBoxSuggestion(result) {
     } else if (result > 15 && result <= 25) {
       text = "Vous pouvez prendre la taille L (25 m3) prix : 140 €";
       colorClass = "green"; // Texte jaune pour "L"
-      price = "1400€"
+      price = "140€"
     } else if (result > 25 && result <= 40) {
       text = "Vous pouvez prendre la taille XL (40 m3) prix : 200 €";
       colorClass = "blue"; // Texte rouge pour "XL"
