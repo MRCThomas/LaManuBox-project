@@ -1,6 +1,6 @@
 import React from 'react'
 import '../assets/styles/Login.css'
-import 'bootstrap/dist/css/bootstrap.css'
+import '../../node_modules/bootstrap'
 
 export default function Contact() {
   return (
