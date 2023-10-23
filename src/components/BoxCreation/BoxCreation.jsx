@@ -78,7 +78,7 @@ export default function BoxCreation() {
     // }
                   const spellvalue = await spell(namoObject)
                   // console.log(spellvalue);
-                    if (!spellvalue) {
+                    if (!spellvalue && namoObject.trim() !== '') {
                       setNameObject('');
                       alert('renseignez correctement le mot')
                       return false
@@ -253,13 +253,13 @@ export default function BoxCreation() {
                     </div>
                 </div>
                 <div className="calculateSpace mt-3 mb-3">
-                      <button onClick={()=> handleCalculateSpace()} className='btn btn-primary btnSpace p-2'>Calculer l'espace renseigné</button>
+                      <button onClick={()=> handleCalculateSpace()} className='btn-primary btnSpace p-2'>Calculer l'espace renseigné</button>
                 </div>
                 <div className="recommandation">
-                      <h2> Estimation de  l'espace démandé : {result}</h2>
-                      <h3>
+                      <h3> Estimation de  l'espace démandé : {result}</h3>
+                      <h4>
                           recommandation : {suggestion.text}
-                      </h3>
+                      </h4>
                       <div className='price'>
                           <p className='bg-primary text-light rounded'> Prix : {suggestion.price} </p>
                       </div>

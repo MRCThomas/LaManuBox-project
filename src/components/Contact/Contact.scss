@@ -1,0 +1,29 @@
+#ContactPage{
+    margin: 10vh auto;
+    padding: 8vh 5vw;
+    border-radius: 25px;
+}
+.Form{
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.formContact{
+    width: 80%;
+}
+.Form h3{
+    text-transform: uppercase;
+}
+// meqiaqueries
+@media (max-width: 768px){
+    .Form{
+        width: 90%;
+    }
+    h3{
+        font-size: 20px !important;
+    }
+    .formContact{
+        width: 95%;
+    }
+}

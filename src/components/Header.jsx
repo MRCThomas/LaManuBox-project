@@ -4,8 +4,12 @@ import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import UserStateComponent from '../components/UserStateComponent'
 import { AuthContext } from '../context/AuthContext';
-
-
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faBars } from '@fortawesome/free-solid-svg-icons';
+import './Header.scss';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBars } from "@fortawesome/free-solid-svg-icons"
+// import { useState } from "react" 
 export default function Header() {
     const authContext = useContext(AuthContext);
     return (
@@ -18,12 +22,18 @@ export default function Header() {
                             <div className="nav_logo d-flex align-items-center">
                                 <img src={logo} alt="logo" />
                             </div>
+                            <div className="burgerMenu">
+                            <FontAwesomeIcon icon={faBars} className="fa-3x" />
+                            </div>
                             <div className='nav_link  d-flex align-items-center gap-4' id='menu'>
                                 <li>
-                                    <NavLink className="text-dark link-underline link-underline-opacity-0" to="/">Accueil</NavLink>
+                                    <NavLink className="text-dark link-underline link-underline-opacity-0 nav__link " to="/">Accueil</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink className="text-dark m-0 link-underline link-underline-opacity-0" to="#box">Nos Box</NavLink>
+                                    <NavLink className="text-dark m-0 link-underline link-underline-opacity-0 nav__link" to="#box">Nos Box</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink className="text-dark m-0 link-underline link-underline-opacity-0 nav__link" to="contact">Contact</NavLink>
                                 </li>
                             </div>
                         </div>

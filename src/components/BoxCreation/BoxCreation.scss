@@ -69,6 +69,11 @@ label{
     width: fit-content;
 
   }
+  .btnSpace{
+    background-color: #745BB3;
+    padding: 1vh 2vw !important;
+    border-radius: 5px;
+  }
   .boxAnimation{
     display: flex;
     flex-direction: column;
@@ -127,10 +132,13 @@ label{
       text-transform: uppercase;
     }
 }
+// .boxAnimation{
+//   width: 50%;
+// }
 .boxAnimation{
-  width: 50%;
+  width: 100%;
+  max-width: 100%;
 }
-
 .btnGroupSize .size{
   border-radius: 0 ;
   
@@ -145,11 +153,11 @@ label{
   margin: 3vh 0;
 }
 .price p{
-  font-size: 25px;
-  // background-color: #745BB3;
-  padding: 1.5vh;
-  width: 20%;
+  font-size: 20px;
+  padding: 1.5vh 1vh;
+  width: 45%;
   text-align: center;
+  margin: 2vh auto;
 }
 @media (max-width: 767px) {
   .size {
@@ -220,5 +228,12 @@ label{
 }
 .sizeDesc small {
   width: 100%;
+}
+.price p{
+  font-size: 18px;
+  padding: 1.5vh;
+  width: 45%;
+  text-align: center;
+  margin: 2vh auto;
 }
 }

@@ -40,21 +40,21 @@ export default function Home() {
 
         {/* Reinsurance */}
         <div className='row section text-center'>
-            <div className='col'>
+            <div className='col-md'>
               <div className='d-flex flex-column align-items-center'>
                 <img className='mb-3' src="./src\assets\images\security-camera-svgrepo-com.png" alt="Caméra de surveillance" />
                 <p className='fw-bolder'>Des box <span className='highlight'>sécurisées</span> </p>
                 <p>C'est vous qui avez le <span className='highlight'>contrôle total</span> de l'accès à votre box, <span className='highlight'>24 heures sur 24, 7 jours sur 7</span>, grâce à votre code secret personnel. </p>
               </div>
             </div>
-            <div className='col'>
+            <div className='col-md'>
               <div className='d-flex flex-column align-items-center'>
                 <img className='mb-4' src="./src\assets\images\warehouse-hangar-svgrepo-com.png" alt="Box de stockage" />
                 <p className='fw-bolder'>Des box <span className='highlight'>accessibles</span></p>
                 <p>Chacun de nos centres est équipé <span className='highlight'>d'un grand nombre de caméras</span> pour détecter les intrusions et les incendies.</p>
               </div>
             </div>
-            <div className='col'>
+            <div className='col-md'>
               <div className='d-flex flex-column align-items-center'>
                 <img className='mb-4' src="./src\assets\images\diploma-contract-svgrepo-com.png" alt="Contrats flexibles" />
                 <p className='fw-bolder'>Des contrats <span className='highlight'>flexibles</span></p>
@@ -83,7 +83,7 @@ export default function Home() {
 
         {/* Notices */}
         <div className='row section notices-section'>
-          <div className='col card pt-3 pb-3'>
+          <div className='col-md card pt-3 pb-3'>
             <div className='card-body'>
               <img className='mb-5' src="./src\assets\images\quote.png" alt="Avis" />
               <p className='mb-5'>J'ai loué un box de rangement chez La Manu Box et je suis très satisfait de leur service. Le personnel était amical et serviable, le box était propre et sécurisé, et les tarifs étaient très raisonnables.</p>
@@ -96,7 +96,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className='col card card-margin-inline pt-3 pb-3'>
+          <div className='col-md card card-margin-inline pt-3 pb-3'>
             <div className='card-body'>
               <img className='mb-5' src="./src\assets\images\quote.png" alt="Avis" />
               <p className='mb-5'>Je recommande vivement La Manu Box pour la location de box de rangement. Le processus d'inscription était simple, le site était bien entretenu, et j'ai toujours eu accès à mes affaires quand j'en avais besoin.</p>
@@ -109,7 +109,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className='col card pt-3 pb-3'>
+          <div className='col-md card pt-3 pb-3'>
             <div className='card-body'>
               <img className='mb-5' src="./src\assets\images\quote.png" alt="Avis" />
               <p className='mb-5'>Je suis un client fidèle de La Manu Box depuis des années. Leurs tarifs compétitifs et leur service client exceptionnel me font revenir chaque fois que j'ai besoin de stocker des affaires.</p>
