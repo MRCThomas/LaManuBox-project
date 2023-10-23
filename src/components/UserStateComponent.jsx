@@ -6,12 +6,10 @@ function UserStateComponent() {
     const authContext = useContext(AuthContext);
     return (
         <div>
-
                 <div>
                     <p>Utilisateur connecté</p>
-                    <button onClick={authContext.handleLogout}>Se déconnecter</button>
+                    <button  className='btn btn-dark' onClick={authContext.handleLogout}>Se déconnecter</button>
                 </div>
-            
         </div>
     );
 }

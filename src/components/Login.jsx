@@ -51,7 +51,7 @@ function Login() {
                                     onChange={(e) => setPassword(e.target.value)}
                                 />
                                 <div className="d-flex justify-content-center" id='login-btn'>
-                                    <button type="button" onClick={handleLogin}>Se connecter</button>
+                                    <button className='btn btn-dark' type="button" onClick={handleLogin}>Se connecter</button>
                                 </div>
                             </div>
                         </form>
