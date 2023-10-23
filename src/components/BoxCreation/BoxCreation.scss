@@ -1,8 +1,7 @@
 .quantity{
     display: flex;
-    // justify-content: end;
     align-items: center;
-    // align-content: end;
+    gap: 15px;
 }
 label{
     font-weight: 600;
@@ -20,6 +19,7 @@ label{
     
     &__item{
         display: flex;
+        justify-content: center;
         // width: 100%;
     }
 }
@@ -28,7 +28,7 @@ label{
 // }
 .fa-duotone-levitate {
     animation: levitate 2s infinite ease-in-out;
-    box-shadow: 0px 4px 8px rgba(0, 128, 0, 0.5);
+    // box-shadow: 0px 4px 8px rgba(0, 128, 0, 0.5);
   }
   
   .fa-duotone-hover {
@@ -36,10 +36,6 @@ label{
     color: #000;
   }
   
-  .fa-duotone-hover:hover {
-    transform: rotate(360deg);
-    color: #00ff00;
-  }
   
   @keyframes levitate {
     0% {
@@ -56,12 +52,156 @@ label{
   #boxSelection{
     display: flex ;
     justify-content: space-between;
-    align-items: center;
+    align-items: top;
+
+  }
+
+  .otherForm{
+    margin: 5vh 0;
+    &__item{
+      display: flex;
+      gap: 10px;
+    }
+  }
+  .boxInformation{
+    width: 45%;
+
+  }
+  .boxAnimation{
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    width: 50%;
+    // padding: 2vh 3vw ;
+    // height:70vh ;
+    // background-color: red;
   }
   .boxIcone{
     display: block;
     margin: 0 auto;
+    margin-top: 15vh ;
   }
 //   .boxInformation,.boxAnimation{
 //     width: fit-content;
 //   }
+.btnBroupSize{
+  margin: 5vh 0;
+  display: flex;
+  gap : 20px
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  #boxSelection{
+    text-align: center;
+    // display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .boxAnimation{
+   margin: 2vh 0;
+  }
+  .btnBroupSize ,.quantity{
+    justify-content: center;
+  }
+  .boxInformation{
+    width: 100%;
+  }
+  // .otherForm{
+  //   justify-content: center !important;
+  // }
+}
+.otherForm__item{
+  width: 100%;
+}
+.preview h3{
+  text-align: center;
+}
+.boxInformation{
+  // width: 100%;
+    .colortext{
+      font-size: 25px;
+      color: purple;
+      text-transform: uppercase;
+    }
+}
+.boxAnimation{
+  width: 50%;
+}
+
+
+.mobileInfo{
+  display: none;
+}
+
+.btnBroupDesc {
+  margin: 3vh 0;
+}
+@media (max-width: 767px) {
+  .size {
+    & h5{
+     font-size: 15px;
+   }
+   & small{
+    font-size: 10px;
+   }
+  }
+  #boxSelection{
+    text-align: center;
+    // display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .boxAnimation{
+    width: 100%;
+    max-width: 100%;
+  }
+  .boxIcone{
+    display: block;
+    margin: 0 auto;
+    margin-top: 10vh ;
+  }
+  /* Styles à appliquer pour les téléphones */
+  // .btnBroupDesc{
+  //   flex-direction: column;
+  // }
+  .quantity{
+    // display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.otherForm__item{
+  display: flex;
+  flex-direction: column;
+}
+.btnGroupQuantity{
+  // display: flex;
+  // flex-direction: column;
+  // // justify-content: end;
+  // align-items: end;
+  // gap: 20px 10px ;
+  
+  &__item{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      // width: 100%;
+  }
+}
+.btnBroupSize{
+  justify-content: center;
+  gap : 5px
+}
+.mobileInfo{
+  display: inherit;
+}
+.recommandation h3{
+  font-size: 15px;
+}
+.recommandation h2{
+  font-size: 20px;
+}
+}

@@ -3,11 +3,13 @@ import './BoxCreation.scss'
 import { useState , useEffect} from 'react';
 import CustomIncrementalInput from '../CustomIncrementalInput/CustomIncrementalInput';
 import CustomFontAwesomeIcon from '../CustomFontAwesomeIcon/CustomFontAwesomeIcon';
+// import CustomFontAwesomeIcon from '../CustomFontAwesomeIcon/CustomFontAwesomeIcon';
 // import handleRemoveChecked from './handleRemoveChecked';
 // import { handleRemoveChecked } from './handleRemoveChecked'
-// import { spell } from '../constants/fetchApi';
+import { spell } from '../../constants/fetchApi';
 import {CalcForm} from '../CalcForm';
 import {CalculateBoxSuggestion} from '../CalculateBoxSuggestion';
+import BtnGroupSize from '../btnGroupSize/btnGroupSize';
 
 export default function BoxCreation() {
   //DECLARATION DES STATES
@@ -34,7 +36,10 @@ export default function BoxCreation() {
     const [countSofa, setCountSofa] = useState(0);
     const [countChest, setCountChest] = useState(0);
     const [countTv, setCountTv] = useState(0);
-
+  // /contentu state
+  const [selectedBox, setSelectedBox] = useState('');
+  // const [selectedBoxText, setSelectedBoxText] = useState('Nos boxes de stockage S de 2 à 3 mètres carrés offrent un espace compact, idéal pour stocker des biens personnels, des documents, des équipements sportifs ou des petits meubles. Ils sont conçus pour répondre à des besoins de stockage de taille modérée, offrant une solution pratique pour garder vos biens en sécurité et organisés. ');
+  
     //VOLUME DES ELEMENTS 
     const volumeChaise = 0.2 ;
     const volumeTable = 1.5 ;
@@ -66,58 +71,64 @@ export default function BoxCreation() {
         };
              
           // CALCUL DE L'ESPACE DEMANDES PAR L'UTILISATEUR
-  const handleCalculateSpace = () => {
-                    // if (!spell(namoObject)) {
-                    //   return
-                    // } 
-                    
-            // CALCUL DE LA VALEUR DE LA SAISI DE L4URILISATEUR
-            const calcChair = CalcForm(volumeChaise,countChair)
-            const calcTable = CalcForm(volumeTable,countTable)
-            const calcCupBoard= CalcForm(volumecupboard, countCupboard)
-            const calcsofa = CalcForm(volumeSofa, countSofa)
-            const calcChest = CalcForm(volumeChest, countChest)
-            const calcTv = CalcForm(volumeTv, countTv)
-
-            // ESPACE TOTAL UTILSE PAR LES CHAMPS
-            const space_usedForm = calcChair + calcTable + calcCupBoard + calcsofa + calcChest + calcTv;
-            let newResult = result;
-
-            // CALCUL DE LA VALEUR DE LA SAISI DE L4URILISATEUR DANS LE CH1MPS AUTRE
-            const space_usedOther = (parseFloat(items) * parseInt(quantityArticles)).toFixed(2);
-              const resultcalc = parseFloat(space_usedOther) + parseFloat(space_usedForm);
-              if (resultcalc > spaceAvailable) {
-                alert("L'espace est plein. Veuillez retirer des objets.");
-              } else {
-                newResult += parseFloat(resultcalc);
-                setResult(newResult);
-              };
-
-              //STOCKAGE DE LA SAISI DANS UN OBJET
-                const entry = parseInt(items) ;
-                const entryName = namoObject.charAt(0).toUpperCase() + namoObject.slice(1) ;
-                const entryquantity = parseInt(quantityArticles);            
-                // console.log(userEntries);
-                setUserEntries(
-                  [...userEntries, {name : entryName,
-                   space : entry ,
-                    quantity : entryquantity,
-                     Table : countTable,
-                      Chair : countChair ,
-                      Cupboard: countCupboard,
-                      Sofa : countSofa,
-                      Chest : countChest,
-                      Tv : countTv
-                    }]);
+  const handleCalculateSpace = async () => {
+                  const spellvalue = await spell(namoObject)
+                    if (!spellvalue) {
+                      setNameObject('');
+                      alert('renseignez correctement le mot')
+                      return false
+                    }else{
+                      console.log(namoObject,'test');
+                      // CALCUL DE LA VALEUR DE LA SAISI DE L4URILISATEUR
+                      const calcChair = CalcForm(volumeChaise,countChair)
+                      const calcTable = CalcForm(volumeTable,countTable)
+                      const calcCupBoard= CalcForm(volumecupboard, countCupboard)
+                      const calcsofa = CalcForm(volumeSofa, countSofa)
+                      const calcChest = CalcForm(volumeChest, countChest)
+                      const calcTv = CalcForm(volumeTv, countTv)
           
-                // Réinitialiser les champs de saisie
-                console.log(userEntries);;
-                setItems(0);
-                setNameObject('');
-                setQuantityArticles(1);
-                // setStackable(false);
-                setCountChair(0)
-                setCountTable(0)
+                      // ESPACE TOTAL UTILSE PAR LES CHAMPS
+                      const space_usedForm = calcChair + calcTable + calcCupBoard + calcsofa + calcChest + calcTv;
+                      let newResult = result;
+          
+                      // CALCUL DE LA VALEUR DE LA SAISI DE L4URILISATEUR DANS LE CH1MPS AUTRE
+                      const space_usedOther = (parseFloat(items) * parseInt(quantityArticles)).toFixed(2);
+                        const resultcalc = parseFloat(space_usedOther) + parseFloat(space_usedForm);
+                        if (resultcalc > spaceAvailable) {
+                          alert("L'espace est plein. Veuillez retirer des objets.");
+                        } else {
+                          newResult += parseFloat(resultcalc);
+                          setResult(newResult);
+                        };
+          
+                        //STOCKAGE DE LA SAISI DANS UN OBJET
+                          const entry = parseInt(items) ;
+                          const entryName = namoObject.charAt(0).toUpperCase() + namoObject.slice(1) ;
+                          const entryquantity = parseInt(quantityArticles);            
+                          // console.log(userEntries);
+                          alert(" deuxieme cas de figure");
+                          setUserEntries(
+                            [...userEntries, {name : entryName,
+                             space : entry ,
+                              quantity : entryquantity,
+                               Table : countTable,
+                                Chair : countChair ,
+                                Cupboard: countCupboard,
+                                Sofa : countSofa,
+                                Chest : countChest,
+                                Tv : countTv
+                              }]);
+                    
+                          // Réinitialiser les champs de saisie
+                          console.log(userEntries);;
+                          setItems(0);
+                          setNameObject('');
+                          setQuantityArticles(1);
+                          // setStackable(false);
+                          setCountChair(0)
+                          setCountTable(0)
+                    } 
+                    
                 
                 
       };
@@ -164,36 +175,54 @@ export default function BoxCreation() {
         };
 
     return (
-      <section id='boxSelection'>
+      <section className='container' id='boxSelection'>
         <div className='boxInformation'>
         {/* <div className='boxAnimation'></div> */}
-                  <h3>Location de Box</h3>
+                  <h3>Choisissez <span className='colortext'>la box</span> adaptez à vos besoins </h3>
+                  <div className='btnBroupDesc'>
+                        <div className='btnBroupSize'>
+                            <BtnGroupSize size='S' height='2 à 3m²' selected={selectedBox === "S"} setSelectedBox={setSelectedBox}/>
+                            <BtnGroupSize size='M' height='3 à 6m²' selected={selectedBox === "M"} setSelectedBox={setSelectedBox}/>
+                            <BtnGroupSize size='L' height='6 à 10m²' selected={selectedBox === "L"} setSelectedBox={setSelectedBox}/>
+                            <BtnGroupSize size='XL' height='10 à 16m²' selected={selectedBox === "XL"} setSelectedBox={setSelectedBox}/>
+                        </div>
+                        <div className='sizeDesc'>
+                          <small>Nos boxes de stockage S de 2 à 3 mètres carrés offrent un espace compact, idéal pour stocker des biens personnels, des documents, des équipements sportifs ou des petits meubles. Ils sont conçus pour répondre à des besoins de stockage de taille modérée, offrant une solution pratique pour garder vos biens en sécurité et organisés. 
+                          Nos boxes de cette taille sont parfaits pour les particuliers et les petites entreprises qui ont besoin d'un espace de stockage supplémentaire sans occuper trop d'espace.</small>
+                        </div>
+                  </div>
                       <div className="quantity">
                           <div className='btnGroupQuantity'>
                                 <div className="btnGroupQuantity__item">
                                     <label htmlFor=""> Chaise </label>
+                                    <label htmlFor="" className='mobileInfo'> le volumune estimé en m3 : {volumeChaise} </label>
                                     <CustomIncrementalInput value={countChair} increment={()=>setCountChair(c=>c+1)} decrement={()=>{ if (countChair > 0) {setCountChair(c => c - 1)}}}/>
                                 </div>
                                 <div className="btnGroupQuantity__item">
                                     <label htmlFor=""> Table </label>
+                                    <label htmlFor="" className='mobileInfo'> le volumune estimé en m3: {volumeTable} </label>
                                     <CustomIncrementalInput value={countTable} increment={()=>setCountTable(c=>c+1)} decrement={()=>setCountTable(c=>c-1)}/>
                                 </div>
                                 <div className="btnGroupQuantity__item">
                                     <label htmlFor=""> Armoire </label>
+                                    <label htmlFor="" className='mobileInfo'> le volumune estimé en m3 : {volumecupboard} </label>
                                     <CustomIncrementalInput value={countCupboard} increment={()=>setCountcupboard(c=>c+1)} decrement={()=>setCountcupboard(c=>c-1)}/>
                                 </div>
                           </div>
                           <div className='btnGroupQuantity'>
                                 <div className="btnGroupQuantity__item">
                                     <label htmlFor=""> Canapé </label>
+                                    <label htmlFor="" className='mobileInfo'> le volumune estimé en m3 : {volumeSofa} </label>
                                     <CustomIncrementalInput value={countSofa} increment={()=>setCountSofa(c=>c+1)} decrement={()=>setCountSofa(c=>c-1)}/>
                                 </div>
                                 <div className="btnGroupQuantity__item">
                                     <label htmlFor=""> Commode </label>
+                                    <label htmlFor="" className='mobileInfo'> le volumune estimé en m3 : {volumeChest} </label>
                                     <CustomIncrementalInput value={countChest} increment={()=>setCountChest(c=>c+1)} decrement={()=>setCountChest(c=>c-1)}/>
                                 </div>
                                 <div className="btnGroupQuantity__item">
                                   <label htmlFor=""> Meuble TV </label>
+                                  <label htmlFor="" className='mobileInfo'> le volumune estimé en m3 : {volumeTv} </label>
                                   <CustomIncrementalInput value={countTv} increment={()=>setCountTv(c=>c+1)} decrement={()=>setCountTv(c=>c-1)}/>
                                 </div>
                           </div>
@@ -203,45 +232,43 @@ export default function BoxCreation() {
                 <div className='otherForm'>
                     <h6> Autres</h6>
                     <small> assurez vous de respecter l'orthographe de vos entrées </small>
-                    <div className="row">
-                      <div className="col-4">
+                    <div className=" otherForm__item">
+                      <div className="col-3-md">
                           <label htmlFor="items">Nom de l'Objet</label>
                           <input type="text" id="items" value={namoObject} onChange={handlenameChange} className="form-control" /> 
                       </div>
-                      <div className="col-4">
+                      <div className="col-3-md">
                           <label htmlFor="items">taille de l'Objets en m3 :</label>
                           <input type="text" id="items" value={items} onChange={handleItemsChange} className="form-control" />
                       </div>
-                      <div className="col-4">
+                      <div className="col-3-md">
                           <label htmlFor="items">Quantité à stocker :</label>
                           <input type="number" id="items" value={quantityArticles} onChange={handleQuantityArticles} className="form-control" />
                       </div>
                     </div>
                 </div>
                 <div className="calculateSpace mt-3 mb-3">
-                      <button onClick={handleCalculateSpace} className='btnSpace'>Calculer l'espace renseigné</button>
+                      <button onClick={()=> handleCalculateSpace()} className='btnSpace'>Calculer l'espace renseigné</button>
                 </div>
                 <div className="recommandation">
-                      <h3>
-                          {suggestion.text}
-                      </h3>
                       <h2> Estimation de  l'espace démandé : {result}</h2>
+                      <h3>
+                          recommandation : {suggestion.text}
+                      </h3>
                 </div>
                 <div className="recap">
-                        <h5> Voici le recap de vos achats cochez ce que vous voulez retiez avant validation  </h5>
+                        <h6> Voici le recap de vos achats cochez ce que vous voulez retiez avant validation  </h6>
                         <div className="recap__item">
                               {userEntries.map((item, index) => (
-                                <div key={index}>
-                                  {item.name && <p>Nom de l'article : {item.name}</p>}
-                                  {item.space > 0 && <p>Taille de l'article en m3 : {item.space}</p>}
-                                  {item.quantity  > 2 && <p>Quantité de l'article : {item.quantity}</p>}
-                                  {item.Table > 0 && <p>Table : {item.Table}</p>}
-                                  {item.Chair > 0 && <p>Chaise : {item.Chair}</p>}
-                                  {item.Cupboard > 0 && <p>Armoire: {item.Cupboard}</p>}
-                                  {item.Sofa > 0 && <p>Canapé : {item.Sofa}</p>}
-                                  {item.Chest > 0 && <p>Commode : {item.Chest}</p>}
-                                  {item.Tv > 0 && <p>Meuble Tv : {item.Tv}</p>}
+                              //   <div class="form-check" key={index}>
+                              //   <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                              //   <label class="form-check-label" for="flexCheckDefault">
+                              //     Default checkbox
+                              //   </label>
+                              // </div>
+                                <div className="form-check" key={index}>
                                   <input
+                                  className='form-check-input'
                                     type="checkbox"
                                     checked={item.checked}
                                     onChange={() => {
@@ -249,6 +276,15 @@ export default function BoxCreation() {
                                       setUserEntries([...userEntries]);
                                     }}
                                   />
+                                  {item.name && <label className="form-check-label" for="flexCheckDefault">Nom de l'article : {item.name}  </label>}
+                                  {item.space > 0 && <label className="form-check-label" for="flexCheckDefault">Taille de l'article en m3 : {item.space}  </label>}
+                                  {item.quantity  > 2 && <label className="form-check-label" for="flexCheckDefault">Quantité de l'article : {item.quantity}  </label>}
+                                  {item.Table > 0 && <label className="form-check-label" for="flexCheckDefault">Table : {item.Table}  </label>}
+                                  {item.Chair > 0 && <label className="form-check-label" for="flexCheckDefault">Chaise : {item.Chair}  </label>}
+                                  {item.Cupboard > 0 && <label className="form-check-label" for="flexCheckDefault">Armoire: {item.Cupboard}  </label>}
+                                  {item.Sofa > 0 && <label className="form-check-label" for="flexCheckDefault">Canapé : {item.Sofa}  </label>}
+                                  {item.Chest > 0 && <label className="form-check-label" for="flexCheckDefault">Commode : {item.Chest}  </label>}
+                                  {item.Tv > 0 && <label className="form-check-label" for="flexCheckDefault">Meuble Tv : {item.Tv}  </label>}
                                 </div>
                               ))}
 
@@ -259,7 +295,10 @@ export default function BoxCreation() {
                 </div>
             </div>
             <div className='boxAnimation'>
+                  <div className='preview'>
 
+                      <h3> Aperçu de votre box </h3>
+                  </div>
                     <div className='boxIcone'>
                           <CustomFontAwesomeIcon  color={suggestion.colorClass }
                             size={
@@ -271,11 +310,8 @@ export default function BoxCreation() {
                                 ? '380px'
                                 : result > 25 && result <= 40
                                 ? '420px'
-                                : '350px' // Taille par défaut
+                                : '400px' // Taille par défaut
                             }
-                            style={{
-                              transition: 'size 0.3s, color 0.3s' // Animation de transition pour la taille et la couleur
-                            }}
                           />
                       </div>  
 

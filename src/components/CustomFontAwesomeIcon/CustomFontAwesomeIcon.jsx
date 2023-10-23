@@ -7,7 +7,7 @@ export default function CustomFontAwesomeIcon(props) {
 
     return (
       <>
-      <FontAwesomeIcon icon={faCube} style={{ fontSize: size, color: color }} className="fa fa-duotone-levitate  "/>
+      <FontAwesomeIcon icon={faCube} style={{ fontSize: size, color: color }} className="fa fa-duotone-levitate $"/>
       </>
     );
 }
