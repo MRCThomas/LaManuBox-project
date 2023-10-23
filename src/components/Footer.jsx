@@ -1,5 +1,6 @@
 import React from 'react'
 import './footer.scss'
+import '../../node_modules/bootstrap'
 
 export default function Footer() {
     return (
