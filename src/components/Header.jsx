@@ -1,12 +1,13 @@
-import React from 'react'
-import {NavLink } from 'react-router-dom'
-
-// import "../assets/styles/Nav.css"
 import logo from "../assets/images/logo-la-manu-box.svg"
 import ScrollToAnchor from './ScrollToAnchor'
+import React, { useContext } from 'react'
+import { NavLink } from 'react-router-dom'
+import UserStateComponent from '../components/UserStateComponent'
+import { AuthContext } from '../context/AuthContext';
 
 
 export default function Header() {
+    const authContext = useContext(AuthContext);
     return (
         <header>
             <ScrollToAnchor/>
@@ -28,6 +29,8 @@ export default function Header() {
                             </li>   
                         </div>
                     </div>
+                  {!authContext.userToken ? (
+                  <>
                    <div className='nav_link  d-flex align-items-center gap-3'id='menu'>
                         <li>
                             <NavLink className="text-light btn btn-primary" to="sing-in">S'inscrire</NavLink>
@@ -36,7 +39,13 @@ export default function Header() {
                             <NavLink className=" btn btn-outline-primary  " to="login">Se connecter</NavLink>
                         </li>
                     </div>
-                      
+                  </>
+                    ) : (
+                      <li><UserStateComponent /></li>
+                    )
+
+                    }
+
                 </ul>
             </nav>
             <div></div>
