@@ -292,7 +292,7 @@ export default function BoxCreation() {
 
                         </div>
                         <div className="deleteObject">
-                              <button className='btn btn-dark' onClick={handleRemoveChecked}>Supprimer</button>
+                              <button className='btnSpace mt-2' onClick={handleRemoveChecked}>Supprimer</button>
                         </div>
                 </div>
             </div>
