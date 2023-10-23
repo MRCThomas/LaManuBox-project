@@ -1,3 +1,5 @@
+@use '../../themes/theme';
+
 .quantity{
     display: flex;
     align-items: center;
@@ -129,6 +131,11 @@ label{
   width: 50%;
 }
 
+.btnGroupSize .size{
+  border-radius: 0 ;
+  
+}
+
 
 .mobileInfo{
   display: none;
@@ -136,6 +143,13 @@ label{
 
 .btnBroupDesc {
   margin: 3vh 0;
+}
+.price p{
+  font-size: 25px;
+  // background-color: #745BB3;
+  padding: 1.5vh;
+  width: 20%;
+  text-align: center;
 }
 @media (max-width: 767px) {
   .size {

@@ -8,13 +8,13 @@ import './home.scss'
 export default function Home() {
   return (
 
-      <div className='container-fluid col-lg-9'>
+      <div className='container-fluid col-lg-10'>
         {/* Banner */}
-        <div className='row align-items-center section'>
+        <div className='row align-items-center section mt-5'>
             <div className='col'>
-              <h1 className='text-uppercase mb-4'>Découvrez nos <span className='highlight'><br />box de stockage</span ><br />adaptées à<br />vos <span className='highlight'>besoins</span></h1>
+              <h1 className='text-uppercase mb-4'>Découvrez <br />nos <span className='highlight'>box de stockage</span ><br />adaptées à<br />vos <span className='highlight'>besoins</span></h1>
               <Link className='btn btn-primary'>
-                <p className='m-0 text-white'>Réserver ma box</p>
+                <p className='m-0 text-white p-1'>Réserver ma box</p>
                 {/* <img src="" alt="Flèche droite" /> */}
               </Link>
             </div>
@@ -32,7 +32,7 @@ export default function Home() {
               <p className='mt-4'><span className='highlight'></span>À La Manu Box, nous comprenons que chaque espace de stockage renferme des histoires précieuses. C'est pourquoi nous nous sommes engagés à offrir un service de location de <span className='highlight'>box de stockage sécurisé</span> qui dépasse vos attentes.</p>
               <p className='mb-4'><span className='highlight'></span>Notre mission est de vous fournir <span className='highlight'>la tranquilité d'esprit</span> en veillant sur vos biens les plus précieux. Nous vous offrons <span className='highlight'>des solutions de sotckage adaptées à vos besoins</span>, qu'il s'agisse de biens personnels, de matériel professionnel, ou d'inventaire commercial.</p>
               <Link className='btn btn-primary'>
-                <p className='m-0 text-white'>Réserver ma box</p>
+                <p className='m-0 text-white p-1'>Réserver ma box</p>
                 {/* <img src="" alt="Flèche droite" /> */}
               </Link>
             </div>

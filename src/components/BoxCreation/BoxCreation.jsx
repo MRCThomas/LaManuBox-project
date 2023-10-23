@@ -72,10 +72,10 @@ export default function BoxCreation() {
              
           // CALCUL DE L'ESPACE DEMANDES PAR L'UTILISATEUR
   const handleCalculateSpace = async () => {
-    if(!namoObject || quantityArticles < 0){
-      alert('vous devez renseignez toutes les valeurs du formulaire.')
-      return;
-    }
+    // if(!namoObject || quantityArticles < 0){
+    //   alert('vous devez renseignez toutes les valeurs du formulaire.')
+    //   return;
+    // }
                   const spellvalue = await spell(namoObject)
                   // console.log(spellvalue);
                     if (!spellvalue) {
@@ -111,7 +111,7 @@ export default function BoxCreation() {
                           const entryName = namoObject.charAt(0).toUpperCase() + namoObject.slice(1) ;
                           const entryquantity = parseInt(quantityArticles);            
                           // console.log(userEntries);
-                          alert(" deuxieme cas de figure");
+                          // alert(" deuxieme cas de figure");
                           setUserEntries(
                             [...userEntries, {name : entryName,
                              space : entry ,
@@ -179,11 +179,11 @@ export default function BoxCreation() {
           setResult(result - spaceRecovered); // Mettre à jour le résultat en retirant l'espace récupéré
         };
 
-    return (
-      <section className='container' id='boxSelection'>
+    return ( 
+      <section className='container section' id='boxSelection'>
         <div className='boxInformation'>
         {/* <div className='boxAnimation'></div> */}
-                  <h3>Choisissez <span className='colortext'>la box</span> adaptez à vos besoins </h3>
+                  <h3>Choisissez <span className='text-primary colortext'>la box</span> adaptez à vos besoins </h3>
                   <div className='btnBroupDesc'>
                         <div className='btnBroupSize'>
                             <BtnGroupSize size='S' height='2 à 3m²' selected={selectedBox === "S"} setSelectedBox={setSelectedBox}/>
@@ -253,24 +253,21 @@ export default function BoxCreation() {
                     </div>
                 </div>
                 <div className="calculateSpace mt-3 mb-3">
-                      <button onClick={()=> handleCalculateSpace()} className='btn btn-dark btnSpace'>Calculer l'espace renseigné</button>
+                      <button onClick={()=> handleCalculateSpace()} className='btn btn-primary btnSpace p-2'>Calculer l'espace renseigné</button>
                 </div>
                 <div className="recommandation">
                       <h2> Estimation de  l'espace démandé : {result}</h2>
                       <h3>
                           recommandation : {suggestion.text}
                       </h3>
+                      <div className='price'>
+                          <p className='bg-primary text-light rounded'> Prix : {suggestion.price} </p>
+                      </div>
                 </div>
-                <div className="recap">
+                <div className="recap"> 
                         <h6> Voici le recap de vos achats cochez ce que vous voulez retiez avant validation  </h6>
                         <div className="recap__item">
                               {userEntries.map((item, index) => (
-                              //   <div class="form-check" key={index}>
-                              //   <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                              //   <label class="form-check-label" for="flexCheckDefault">
-                              //     Default checkbox
-                              //   </label>
-                              // </div>
                                 <div className="form-check" key={index}>
                                   <input
                                   className='form-check-input'

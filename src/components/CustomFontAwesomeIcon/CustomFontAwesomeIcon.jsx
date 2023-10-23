@@ -4,10 +4,10 @@ import { faCube } from '@fortawesome/free-solid-svg-icons'
 
 export default function CustomFontAwesomeIcon(props) {
     const { size, color } = props;
-
+  console.log(color);
     return (
       <>
-      <FontAwesomeIcon icon={faCube} style={{ fontSize: size, color: color }} className="fa fa-duotone-levitate $"/>
+      <FontAwesomeIcon icon={faCube} style={{ fontSize: size,  }} color={color} className="fa fa-duotone-levitate $"/>
       </>
     );
 }
