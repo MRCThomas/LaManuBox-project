@@ -1,0 +1,18 @@
+nav ul {
+  list-style: none;
+  font-size: 0.8rem;
+  width: 80%;
+}
+.nav_logo img {
+  height: 5.5vh;
+}
+
+nav {
+  height: 4rem;
+}
+.container_logo_link {
+  width: 45%;
+}
+.nav_ls a {
+  font-size: 0.8rem;
+}

@@ -1,5 +1,5 @@
 @use '../themes/theme' as *;
-@import '../bootstrap/scss/bootstrap.scss';
+@import '../../node_modules/bootstrap/';
 
 @font-face {
     font-family: 'Rubik';
@@ -12,6 +12,7 @@
 }
 
 .highlight {
+    font-size: 1em;
     color: #745BB3
 }
 
@@ -96,3 +97,4 @@ img[alt^="Localisation La Manu Box"] {
         margin-block: 6vh;
     }
 }
+
