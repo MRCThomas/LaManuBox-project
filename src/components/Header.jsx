@@ -22,7 +22,7 @@ export default function Header() {
                                 <NavLink className="text-dark link-underline link-underline-opacity-0" to="/">Accueil</NavLink>
                             </li>
                             <li>
-                                <NavLink className="text-dark m-0 link-underline link-underline-opacity-0" to="/#box">Nos Box</NavLink>
+                                <NavLink className="text-dark m-0 link-underline link-underline-opacity-0" to="#box">Nos Box</NavLink>
                             </li>
                             <li>
                                 <NavLink className="text-dark link-underline link-underline-opacity-0" to="contact">Contact</NavLink>
@@ -33,7 +33,7 @@ export default function Header() {
                   <>
                    <div className='nav_link  d-flex align-items-center gap-3'id='menu'>
                         <li>
-                            <NavLink className="text-light btn btn-primary" to="sing-in">S'inscrire</NavLink>
+                            <NavLink className="text-light btn btn-primary" to="sign-in">S'inscrire</NavLink>
                         </li>
                         <li>
                             <NavLink className=" btn btn-outline-primary  " to="login">Se connecter</NavLink>
