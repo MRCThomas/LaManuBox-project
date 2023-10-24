@@ -1,0 +1,25 @@
+/* *{
+    border: 1px solid red;
+} */
+body {
+    display: block;
+    background-color: red;
+}
+
+#contact {
+    background-image: url("./assets/images/background-connexion.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.col-md-4 {
+    background-color: white;
+    border-radius: 1em;
+    width: 50vh;
+    height: 50vh;
+}
+
+#contact-btn {
+    padding-top: 2em;
+}

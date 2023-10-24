@@ -1,0 +1,22 @@
+.nav__link:hover{
+    color: #745BB3 !important;
+}
+.burgerMenu{
+    display: none;
+}
+// mediqueries
+@media (max-width: 768px){
+    .burgerMenu{
+        display: inherit;
+    }  
+    .container_logo_link{
+        display: flex !important;
+        justify-content: space-between !important;
+    }
+    .burgerMenu{
+        margin-left: 13vw ;
+    }
+    #menu{
+        display: none !important;
+    }
+}

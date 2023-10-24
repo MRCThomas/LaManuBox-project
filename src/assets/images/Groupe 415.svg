@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="317.294" height="416.947" viewBox="0 0 317.294 416.947">
+  <g id="Groupe_415" data-name="Groupe 415" transform="translate(-1030 -732.07)">
+    <path id="Tracé_161" data-name="Tracé 161" d="M144.24,304.7a152.712,152.712,0,0,1,42.107-99.078,174.579,174.579,0,0,1,92.409-50.647,165.721,165.721,0,0,1,83.008,4.7c23.576,4.651,44.445,16.636,61.648,33.322,17.153,16.66,30.615,37.849,35.782,61.376,5.537,25.225.049,49.638-8.761,73.411-8.589,23.207-19.86,45.479-25.372,69.719-10.41,46.094,8.146,97.676-17.424,140.522-5.931,9.917-14.15,19.1-24.462,24.511-9.795,5.168-20.894,6.891-31.845,5.956-22.641-1.92-43.781-12.846-62.755-24.684a326.509,326.509,0,0,1-104-104.591,283.367,283.367,0,0,1-30.516-67.259c-6.5-21.656-10.68-44.592-9.819-67.258" transform="translate(885.872 580.285)" fill="#ffbb62"/>
+    <text id="Horaires" transform="translate(1112 822)" fill="#fff" font-size="30" font-family="Unbounded-Regular, Unbounded"><tspan x="0" y="0">Horaires</tspan></text>
+    <text id="Lundi_-_Vendredi_11h_22h30_Samedi_-_Dimanche_et_Jours_fériés_10h_21h00" data-name="Lundi - Vendredi
+11h – 22h30
+Samedi - Dimanche
+et Jours fériés 
+10h – 21h00" transform="translate(1050 849)" fill="#ea644f" font-size="18" font-family="FaktumTest-Bold, Faktum Test" font-weight="700"><tspan x="67.135" y="18">Lundi - Vendredi</tspan><tspan font-family="FaktumTest-Regular, Faktum Test" font-weight="400"><tspan x="89.968" y="46">11h </tspan><tspan y="46" font-family="SegoeUI, Segoe UI">–</tspan><tspan y="46" xml:space="preserve"> 22h30</tspan></tspan><tspan x="52.474" y="74">Samedi - Dimanche</tspan><tspan x="76.486" y="102">et Jours f</tspan><tspan y="102" font-family="SegoeUI-Bold, Segoe UI">é</tspan><tspan y="102">ri</tspan><tspan y="102" font-family="SegoeUI-Bold, Segoe UI">é</tspan><tspan y="102">s </tspan><tspan font-family="FaktumTest-Regular, Faktum Test" font-weight="400"><tspan x="88.825" y="130">10h </tspan><tspan y="130" font-family="SegoeUI, Segoe UI">–</tspan><tspan y="130" xml:space="preserve"> 21h00</tspan></tspan></text>
+  </g>
+</svg>
