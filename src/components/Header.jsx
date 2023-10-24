@@ -30,7 +30,7 @@ export default function Header() {
                                     <NavLink className="text-dark link-underline link-underline-opacity-0 nav__link " to="/">Accueil</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink className="text-dark m-0 link-underline link-underline-opacity-0 nav__link" to="#box">Nos Box</NavLink>
+                                    <NavLink className="text-dark m-0 link-underline link-underline-opacity-0 nav__link" to="#boxSelection">Nos Box</NavLink>
                                 </li>
                                 <li>
                                     <NavLink className="text-dark m-0 link-underline link-underline-opacity-0 nav__link" to="contact">Contact</NavLink>
